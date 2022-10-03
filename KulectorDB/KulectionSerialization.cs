@@ -1,5 +1,8 @@
 ﻿// Handles serialization/deserialization to/from a file
 
+using System;
+using System.IO;
+using System.IO.Compression;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace KulectorDB
@@ -12,9 +15,13 @@ namespace KulectorDB
             // create a fs stream
             using (Stream stream = File.Open(FilePath, FileMode.Create))
             {
-                // create and serialize the file
-                var BinFormat = new BinaryFormatter();
-                BinFormat.Serialize(stream, _Kulection);
+                using (GZipStream GZStream = new GZipStream(stream, CompressionMode.Compress))
+                {
+                    // create and serialize the file
+                    var BinFormat = new BinaryFormatter();
+                    BinFormat.Serialize(GZStream, _Kulection);
+                }
+
             }
         }
 
@@ -24,9 +31,12 @@ namespace KulectorDB
             // create a fs stream
             using (Stream stream = File.Open(FilePath, FileMode.Open))
             {
-                // create and deserialize the file
-                var BinFormat = new BinaryFormatter();
-                return (Kulection)BinFormat.Deserialize(stream);
+                using (GZipStream GZStream = new GZipStream(stream, CompressionMode.Decompress))
+                {
+                    // open and deserialize the file
+                    var BinFormat = new BinaryFormatter();
+                    return (Kulection)BinFormat.Deserialize(GZStream);
+                }
             }
         }
     }

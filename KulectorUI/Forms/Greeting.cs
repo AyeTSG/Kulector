@@ -46,6 +46,15 @@ namespace KulectorUI.Forms
         {
             // Show the dialog
             OfdOpenKul.ShowDialog();
+
+            // Get the Kulection
+            Kulection openedKul = KulectionSerialization.LoadKulectionFile(OfdOpenKul.FileName);
+
+            // Open a Kulection
+            this.Hide();
+            var NewManageForm = new ManageKulection(openedKul);
+            NewManageForm.FormClosed += (s, args) => this.Close();
+            NewManageForm.Show();
         }
     }
 }

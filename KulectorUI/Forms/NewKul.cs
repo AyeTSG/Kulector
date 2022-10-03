@@ -22,6 +22,12 @@ namespace KulectorUI.Forms
         private void BtnCreate_Click(object sender, EventArgs e)
         {
             Kulection tmpKul = new Kulection(TbCollectionName.Text);
+
+            // show new kullection window
+            this.Hide();
+            var NewKulForm = new ManageKulection(tmpKul);
+            NewKulForm.FormClosed += (s, args) => this.Close();
+            NewKulForm.Show();
         }
     }
 }

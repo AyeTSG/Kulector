@@ -15,7 +15,7 @@ namespace KulectorDevTest
 
             for (int i = 0; i < 4096; i++)
             {
-                KulectionItem testItem = new KulectionItem("Bulk Item", "Bulk Item Description");
+                KulectionItem testItem = new KulectionItem("Bulk Item", "Bulk Item Description", 64);
                 testCol.AddItem(testItem);
             }
 

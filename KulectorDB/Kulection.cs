@@ -12,7 +12,7 @@ namespace KulectorDB
     {
         public string KulectionName;
         public static string KulectionVersion;
-        private List<KulectionItem> KulectionItems;
+        public List<KulectionItem> KulectionItems;
 
         // default constructor for a kulection
         public Kulection(string Name)
@@ -26,6 +26,15 @@ namespace KulectorDB
         public void AddItem(KulectionItem Item)
         {
             KulectionItems.Add(Item);
+        }
+
+        // adds an item advancely
+        public void AddItem(string ItemName, string ItemDescription, int ItemQuantity, Guid ItemID)
+        {
+            KulectionItem tmpitem = new KulectionItem(ItemName, ItemDescription, ItemQuantity);
+            tmpitem.ItemId = ItemID;
+
+            KulectionItems.Add(tmpitem);
         }
 
         // removes an item from the kulection

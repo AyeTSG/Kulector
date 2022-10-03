@@ -130,6 +130,7 @@
             this.BTNRemove.TabIndex = 4;
             this.BTNRemove.Text = "Remove Item";
             this.BTNRemove.UseVisualStyleBackColor = true;
+            this.BTNRemove.Click += new System.EventHandler(this.BTNRemove_Click);
             // 
             // TLPEditButtons
             // 

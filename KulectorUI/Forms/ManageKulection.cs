@@ -69,5 +69,19 @@ namespace KulectorUI.Forms
         {
             DGVItems.Rows.Add("Temp Name", "Temp Desc", new Guid().ToString(), 16);
         }
+
+        private void BTNRemove_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow Row in DGVItems.Rows)
+            {
+                foreach (DataGridViewCell Cell in Row.Cells)
+                {
+                    if (Cell.Selected)
+                    {
+                        DGVItems.Rows.RemoveAt(Cell.RowIndex);
+                    }
+                }
+            }
+        }
     }
 }

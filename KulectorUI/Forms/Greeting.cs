@@ -25,12 +25,20 @@ namespace KulectorUI.Forms
         // Create Kulection
         private void BtnCreate_Click(object sender, EventArgs e)
         {
+            /* == old ==
             // Show the dialog
             SfdCreateKul.ShowDialog();
 
             // Create a Kulection
             Kulection createdKul = new Kulection("New Kulection");
             KulectionSerialization.WriteKulectionFile(SfdCreateKul.FileName, createdKul);
+            */
+
+            // show new kullection window
+            this.Hide();
+            var NewKulForm = new NewKul();
+            NewKulForm.FormClosed += (s, args) => this.Close();
+            NewKulForm.Show();
         }
 
         // Open Kulection

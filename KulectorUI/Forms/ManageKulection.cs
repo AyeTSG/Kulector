@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KulectorDB;
 
 namespace KulectorUI.Forms
 {
     public partial class ManageKulection : Form
     {
-        public ManageKulection()
+        public ManageKulection(Kulection InCollection)
         {
             InitializeComponent();
         }

@@ -17,5 +17,11 @@ namespace KulectorUI.Forms
         {
             InitializeComponent();
         }
+
+        // Create the actual collection
+        private void BtnCreate_Click(object sender, EventArgs e)
+        {
+            Kulection tmpKul = new Kulection(TbCollectionName.Text);
+        }
     }
 }

@@ -7,13 +7,15 @@ namespace KulectorDB
     {
         public string ItemName;
         public string ItemDescription;
+        public int ItemQuantity;
         public Guid ItemId;
 
         // Default constructor for a kulection item
-        public KulectionItem(string Name, string Description)
+        public KulectionItem(string Name, string Description, int Quantity)
         {
             ItemName = Name;
             ItemDescription = Description;
+            ItemQuantity = Quantity;
             ItemId = Guid.NewGuid();
         }
     }

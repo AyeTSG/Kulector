@@ -14,4 +14,10 @@
     <ProjectReference Include="..\KulectorDB\KulectorDB.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Forms\NewKul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

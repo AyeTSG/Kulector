@@ -126,7 +126,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Greeting";
-            this.Text = "Kulector";
+            this.Text = "Kulector - Welcome";
             this.ResumeLayout(false);
             this.PerformLayout();
 

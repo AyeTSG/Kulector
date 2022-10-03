@@ -11,12 +11,13 @@ namespace KulectorDevTest
             // create a new kulection
             Kulection testCol = new Kulection("Test Kulection");
 
-            // add test items
-            KulectionItem testItem1 = new KulectionItem("Test 1", "Test Item 1");
-            KulectionItem testItem2 = new KulectionItem("Test 2", "Test Item 2");
+            // bulk add test items
 
-            testCol.AddItem(testItem1);
-            testCol.AddItem(testItem2);
+            for (int i = 0; i < 4096; i++)
+            {
+                KulectionItem testItem = new KulectionItem("Bulk Item", "Bulk Item Description");
+                testCol.AddItem(testItem);
+            }
 
             Console.WriteLine("testing saving...");
 

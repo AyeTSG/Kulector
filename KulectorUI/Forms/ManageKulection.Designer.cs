@@ -65,6 +65,7 @@
             this.DGVItems.RowTemplate.Height = 25;
             this.DGVItems.Size = new System.Drawing.Size(886, 488);
             this.DGVItems.TabIndex = 0;
+            this.DGVItems.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVItems_CellDoubleClick);
             // 
             // ClmName
             // 

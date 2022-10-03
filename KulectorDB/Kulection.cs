@@ -29,10 +29,9 @@ namespace KulectorDB
         }
 
         // adds an item advancely
-        public void AddItem(string ItemName, string ItemDescription, int ItemQuantity, Guid ItemID)
+        public void AddItem(string ItemName, string ItemDescription, int ItemQuantity)
         {
             KulectionItem tmpitem = new KulectionItem(ItemName, ItemDescription, ItemQuantity);
-            tmpitem.ItemId = ItemID;
 
             KulectionItems.Add(tmpitem);
         }

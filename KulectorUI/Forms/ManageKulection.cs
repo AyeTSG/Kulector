@@ -32,7 +32,7 @@ namespace KulectorUI.Forms
             foreach (KulectionItem Item in WorkingKulection.KulectionItems)
             {
                 // add entry to list (name, desc, guid, quantity)
-                DGVItems.Rows.Add(Item.ItemName, Item.ItemDescription, Item.ItemId.ToString(), Item.ItemQuantity);
+                DGVItems.Rows.Add(Item.ItemName, Item.ItemDescription, Item.ItemQuantity);
             }
         }
 
@@ -47,7 +47,7 @@ namespace KulectorUI.Forms
             foreach (DataGridViewRow Row in DGVItems.Rows)
             {
                 // add item
-                WorkingKulection.AddItem((string)Row.Cells[0].Value, (string)Row.Cells[1].Value, (int)Row.Cells[3].Value, new Guid((string)Row.Cells[2].Value));
+                WorkingKulection.AddItem((string)Row.Cells[0].Value, (string)Row.Cells[1].Value, (int)Row.Cells[3].Value);
             }
         }
 
@@ -82,6 +82,16 @@ namespace KulectorUI.Forms
                     }
                 }
             }
+        }
+
+        private void DGVItems_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // get the item
+            DataGridViewRow Row = DGVItems.Rows[e.RowIndex];
+
+            // create and open a new item editor
+            var NewKulForm = new EditItem(this, (string)Row.Cells[0].Value);
+            NewKulForm.Show();
         }
     }
 }

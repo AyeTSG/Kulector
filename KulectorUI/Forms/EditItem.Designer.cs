@@ -94,7 +94,7 @@
             this.BtnCancelEditing.Name = "BtnCancelEditing";
             this.BtnCancelEditing.Size = new System.Drawing.Size(149, 48);
             this.BtnCancelEditing.TabIndex = 1;
-            this.BtnCancelEditing.Text = "s";
+            this.BtnCancelEditing.Text = "Cancel";
             this.BtnCancelEditing.UseVisualStyleBackColor = true;
             this.BtnCancelEditing.Click += new System.EventHandler(this.BtnCancelEditing_Click);
             // 

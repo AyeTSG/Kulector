@@ -32,15 +32,21 @@
             this.TLPBottomRight = new System.Windows.Forms.TableLayoutPanel();
             this.BtnSaveItem = new System.Windows.Forms.Button();
             this.BtnCancelEditing = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.RtbItemDesc = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TLPMaster = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnImageChange = new System.Windows.Forms.Button();
             this.NudItemQuantity = new System.Windows.Forms.NumericUpDown();
             this.LblItemQuantity = new System.Windows.Forms.Label();
             this.TbItemName = new System.Windows.Forms.TextBox();
             this.LblItemName = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.TLPRight.SuspendLayout();
             this.TLPBottomRight.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.TLPMaster.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NudItemQuantity)).BeginInit();
@@ -51,7 +57,7 @@
             this.TLPRight.ColumnCount = 1;
             this.TLPRight.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLPRight.Controls.Add(this.TLPBottomRight, 0, 1);
-            this.TLPRight.Controls.Add(this.RtbItemDesc, 0, 0);
+            this.TLPRight.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.TLPRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TLPRight.Location = new System.Drawing.Point(483, 3);
             this.TLPRight.Name = "TLPRight";
@@ -73,6 +79,7 @@
             this.TLPBottomRight.Name = "TLPBottomRight";
             this.TLPBottomRight.RowCount = 1;
             this.TLPBottomRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TLPBottomRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TLPBottomRight.Size = new System.Drawing.Size(311, 54);
             this.TLPBottomRight.TabIndex = 0;
             // 
@@ -98,14 +105,38 @@
             this.BtnCancelEditing.UseVisualStyleBackColor = true;
             this.BtnCancelEditing.Click += new System.EventHandler(this.BtnCancelEditing_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.RtbItemDesc, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.81546F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.18454F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(311, 401);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
             // RtbItemDesc
             // 
-            this.RtbItemDesc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RtbItemDesc.Location = new System.Drawing.Point(3, 3);
+            this.RtbItemDesc.Location = new System.Drawing.Point(3, 299);
             this.RtbItemDesc.Name = "RtbItemDesc";
-            this.RtbItemDesc.Size = new System.Drawing.Size(311, 401);
+            this.RtbItemDesc.Size = new System.Drawing.Size(305, 99);
             this.RtbItemDesc.TabIndex = 1;
             this.RtbItemDesc.Text = "";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(305, 290);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // TLPMaster
             // 
@@ -124,6 +155,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BtnImageChange);
             this.panel1.Controls.Add(this.NudItemQuantity);
             this.panel1.Controls.Add(this.LblItemQuantity);
             this.panel1.Controls.Add(this.TbItemName);
@@ -133,6 +165,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(474, 467);
             this.panel1.TabIndex = 1;
+            // 
+            // BtnImageChange
+            // 
+            this.BtnImageChange.Location = new System.Drawing.Point(9, 410);
+            this.BtnImageChange.Name = "BtnImageChange";
+            this.BtnImageChange.Size = new System.Drawing.Size(200, 48);
+            this.BtnImageChange.TabIndex = 5;
+            this.BtnImageChange.Text = "Change Image";
+            this.BtnImageChange.UseVisualStyleBackColor = true;
+            this.BtnImageChange.Click += new System.EventHandler(this.BtnImageChange_Click);
             // 
             // NudItemQuantity
             // 
@@ -168,6 +210,10 @@
             this.LblItemName.Text = "Item Name:";
             this.LblItemName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // EditItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -181,6 +227,8 @@
             this.Text = "Kulector - Item Editor";
             this.TLPRight.ResumeLayout(false);
             this.TLPBottomRight.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.TLPMaster.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -202,5 +250,9 @@
         private Label LblItemName;
         private NumericUpDown NudItemQuantity;
         private Label LblItemQuantity;
+        private PictureBox pictureBox1;
+        private Button BtnImageChange;
+        private TableLayoutPanel tableLayoutPanel1;
+        private OpenFileDialog openFileDialog1;
     }
 }

@@ -3,7 +3,7 @@ namespace KulectorUI
     internal static class Program
     {
         // KulectorUI version
-        public static string VERSION = "v0.1";
+        public static string VERSION = "v0.0.1";
 
         /// <summary>
         ///  The main entry point for the application.

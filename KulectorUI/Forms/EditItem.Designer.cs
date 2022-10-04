@@ -175,6 +175,8 @@
             this.ClientSize = new System.Drawing.Size(803, 473);
             this.Controls.Add(this.TLPMaster);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditItem";
             this.Text = "Kulector - Item Editor";
             this.TLPRight.ResumeLayout(false);

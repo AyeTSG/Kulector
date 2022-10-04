@@ -40,9 +40,10 @@
             // 
             // BtnCreate
             // 
-            this.BtnCreate.Location = new System.Drawing.Point(62, 108);
+            this.BtnCreate.Location = new System.Drawing.Point(71, 144);
+            this.BtnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCreate.Name = "BtnCreate";
-            this.BtnCreate.Size = new System.Drawing.Size(131, 23);
+            this.BtnCreate.Size = new System.Drawing.Size(150, 31);
             this.BtnCreate.TabIndex = 0;
             this.BtnCreate.Text = "Create a Kulection";
             this.BtnCreate.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@
             // 
             // BtnOpen
             // 
-            this.BtnOpen.Location = new System.Drawing.Point(62, 137);
+            this.BtnOpen.Location = new System.Drawing.Point(71, 183);
+            this.BtnOpen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnOpen.Name = "BtnOpen";
-            this.BtnOpen.Size = new System.Drawing.Size(131, 23);
+            this.BtnOpen.Size = new System.Drawing.Size(150, 31);
             this.BtnOpen.TabIndex = 1;
             this.BtnOpen.Text = "Open a Kulection";
             this.BtnOpen.UseVisualStyleBackColor = true;
@@ -62,9 +64,9 @@
             // 
             this.LblTitle.AutoSize = true;
             this.LblTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblTitle.Location = new System.Drawing.Point(71, 18);
+            this.LblTitle.Location = new System.Drawing.Point(81, 24);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(115, 37);
+            this.LblTitle.Size = new System.Drawing.Size(145, 46);
             this.LblTitle.TabIndex = 2;
             this.LblTitle.Text = "Kulector";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,9 +75,9 @@
             // 
             this.LblSubtitle.AutoSize = true;
             this.LblSubtitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblSubtitle.Location = new System.Drawing.Point(76, 50);
+            this.LblSubtitle.Location = new System.Drawing.Point(87, 67);
             this.LblSubtitle.Name = "LblSubtitle";
-            this.LblSubtitle.Size = new System.Drawing.Size(103, 34);
+            this.LblSubtitle.Size = new System.Drawing.Size(137, 46);
             this.LblSubtitle.TabIndex = 3;
             this.LblSubtitle.Text = "Collect what you\r\ncare about";
             this.LblSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,9 +86,9 @@
             // 
             this.LblDbVer.AutoSize = true;
             this.LblDbVer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblDbVer.Location = new System.Drawing.Point(12, 294);
+            this.LblDbVer.Location = new System.Drawing.Point(14, 259);
             this.LblDbVer.Name = "LblDbVer";
-            this.LblDbVer.Size = new System.Drawing.Size(92, 13);
+            this.LblDbVer.Size = new System.Drawing.Size(113, 19);
             this.LblDbVer.TabIndex = 4;
             this.LblDbVer.Text = "KulectionDB vX,X";
             // 
@@ -94,10 +96,10 @@
             // 
             this.LblUiVer.AutoSize = true;
             this.LblUiVer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblUiVer.Location = new System.Drawing.Point(12, 281);
+            this.LblUiVer.Location = new System.Drawing.Point(14, 242);
             this.LblUiVer.Name = "LblUiVer";
             this.LblUiVer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LblUiVer.Size = new System.Drawing.Size(89, 13);
+            this.LblUiVer.Size = new System.Drawing.Size(109, 19);
             this.LblUiVer.TabIndex = 5;
             this.LblUiVer.Text = "KulectionUI vX,X";
             // 
@@ -113,9 +115,9 @@
             // 
             // Greeting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 316);
+            this.ClientSize = new System.Drawing.Size(313, 285);
             this.Controls.Add(this.LblUiVer);
             this.Controls.Add(this.LblDbVer);
             this.Controls.Add(this.LblSubtitle);
@@ -123,6 +125,7 @@
             this.Controls.Add(this.BtnOpen);
             this.Controls.Add(this.BtnCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Greeting";

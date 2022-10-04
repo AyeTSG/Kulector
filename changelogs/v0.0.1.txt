@@ -1,5 +1,8 @@
 == Added ==
 
 == Changed ==
+- The item editor now closes when clicking cancel, or when saving an item
+- Resized the welcome window to be more appropriate for the content
 
 == Removed ==
+- The maximize and minimize buttons have been removed from the item editor

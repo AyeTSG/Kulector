@@ -1,2 +1,4 @@
 # Kulector
-A software for collectors.
+![](docs/present.png)
+
+### A super simple app to create and manage collections of various things.

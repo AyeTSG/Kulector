@@ -47,7 +47,7 @@ namespace KulectorUI.Forms
             foreach (DataGridViewRow Row in DGVItems.Rows)
             {
                 // add item
-                WorkingKulection.AddItem((string)Row.Cells[0].Value, (string)Row.Cells[1].Value, (int)Row.Cells[3].Value);
+                WorkingKulection.AddItem((string)Row.Cells[0].Value, (string)Row.Cells[1].Value, (int)Row.Cells[2].Value);
             }
         }
 
@@ -67,20 +67,23 @@ namespace KulectorUI.Forms
 
         private void BTNAdd_Click(object sender, EventArgs e)
         {
-            DGVItems.Rows.Add("Temp Name", "Temp Desc", new Guid().ToString(), 16);
+            DGVItems.Rows.Add("New Item", "Item Description", 1);
         }
 
         private void BTNRemove_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow Row in DGVItems.Rows)
+            // prevent anything but first column from being sent
+            foreach (DataGridViewCell Cell in DGVItems.SelectedCells)
             {
-                foreach (DataGridViewCell Cell in Row.Cells)
+                if (DGVItems.Columns[Cell.ColumnIndex].Name != ClmName.Name)
                 {
-                    if (Cell.Selected)
-                    {
-                        DGVItems.Rows.RemoveAt(Cell.RowIndex);
-                    }
+                    Cell.Selected = false;
                 }
+            }
+
+            foreach (DataGridViewCell Cell in DGVItems.SelectedCells)
+            {
+                DGVItems.Rows.RemoveAt(Cell.RowIndex);
             }
         }
 
@@ -90,7 +93,7 @@ namespace KulectorUI.Forms
             DataGridViewRow Row = DGVItems.Rows[e.RowIndex];
 
             // create and open a new item editor
-            var NewKulForm = new EditItem(this, (string)Row.Cells[0].Value);
+            var NewKulForm = new EditItem(this, e.RowIndex, (string)Row.Cells[0].Value, (string)Row.Cells[1].Value, (int)Row.Cells[2].Value);
             NewKulForm.Show();
         }
     }

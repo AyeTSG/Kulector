@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVItems = new System.Windows.Forms.DataGridView();
-            this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmGuid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTNSave = new System.Windows.Forms.Button();
             this.BTNAdd = new System.Windows.Forms.Button();
             this.BTNRemove = new System.Windows.Forms.Button();
@@ -40,6 +37,9 @@
             this.SfdCreateKul = new System.Windows.Forms.SaveFileDialog();
             this.PNLTitle = new System.Windows.Forms.Panel();
             this.LBLTitle = new System.Windows.Forms.Label();
+            this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVItems)).BeginInit();
             this.TLPEditButtons.SuspendLayout();
             this.PNLTitle.SuspendLayout();
@@ -54,7 +54,6 @@
             this.DGVItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClmName,
             this.ClmDescrip,
-            this.ClmGuid,
             this.ClmnQuantity});
             this.DGVItems.Location = new System.Drawing.Point(14, 13);
             this.DGVItems.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -66,36 +65,6 @@
             this.DGVItems.Size = new System.Drawing.Size(886, 488);
             this.DGVItems.TabIndex = 0;
             this.DGVItems.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVItems_CellDoubleClick);
-            // 
-            // ClmName
-            // 
-            this.ClmName.HeaderText = "Name";
-            this.ClmName.MinimumWidth = 6;
-            this.ClmName.Name = "ClmName";
-            this.ClmName.ReadOnly = true;
-            // 
-            // ClmDescrip
-            // 
-            this.ClmDescrip.HeaderText = "Description";
-            this.ClmDescrip.MinimumWidth = 6;
-            this.ClmDescrip.Name = "ClmDescrip";
-            this.ClmDescrip.ReadOnly = true;
-            this.ClmDescrip.Visible = false;
-            // 
-            // ClmGuid
-            // 
-            this.ClmGuid.HeaderText = "GUID";
-            this.ClmGuid.MinimumWidth = 6;
-            this.ClmGuid.Name = "ClmGuid";
-            this.ClmGuid.ReadOnly = true;
-            this.ClmGuid.Visible = false;
-            // 
-            // ClmnQuantity
-            // 
-            this.ClmnQuantity.HeaderText = "Quantity";
-            this.ClmnQuantity.MinimumWidth = 6;
-            this.ClmnQuantity.Name = "ClmnQuantity";
-            this.ClmnQuantity.ReadOnly = true;
             // 
             // BTNSave
             // 
@@ -174,6 +143,33 @@
             this.LBLTitle.Text = "[ KUL TITLE ]";
             this.LBLTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ClmName
+            // 
+            this.ClmName.HeaderText = "Name";
+            this.ClmName.MinimumWidth = 6;
+            this.ClmName.Name = "ClmName";
+            this.ClmName.ReadOnly = true;
+            // 
+            // ClmDescrip
+            // 
+            this.ClmDescrip.HeaderText = "Description";
+            this.ClmDescrip.MinimumWidth = 6;
+            this.ClmDescrip.Name = "ClmDescrip";
+            this.ClmDescrip.ReadOnly = true;
+            this.ClmDescrip.Visible = false;
+            // 
+            // ClmnQuantity
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.ClmnQuantity.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ClmnQuantity.HeaderText = "Quantity";
+            this.ClmnQuantity.MinimumWidth = 6;
+            this.ClmnQuantity.Name = "ClmnQuantity";
+            this.ClmnQuantity.ReadOnly = true;
+            // 
             // ManageKulection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -187,7 +183,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ManageKulection";
-            this.Text = "Kulector - Manage Kulection";
+            this.Text = "Kulector - Kulection Manager";
             ((System.ComponentModel.ISupportInitialize)(this.DGVItems)).EndInit();
             this.TLPEditButtons.ResumeLayout(false);
             this.PNLTitle.ResumeLayout(false);
@@ -197,17 +193,16 @@
 
         #endregion
 
-        private DataGridView DGVItems;
+        public DataGridView DGVItems;
         private Button BTNSave;
         private Button BTNAdd;
         private Button BTNRemove;
-        private DataGridViewTextBoxColumn ClmName;
-        private DataGridViewTextBoxColumn ClmDescrip;
-        private DataGridViewTextBoxColumn ClmGuid;
-        private DataGridViewTextBoxColumn ClmnQuantity;
         private TableLayoutPanel TLPEditButtons;
         private SaveFileDialog SfdCreateKul;
         private Panel PNLTitle;
         private Label LBLTitle;
+        private DataGridViewTextBoxColumn ClmName;
+        private DataGridViewTextBoxColumn ClmDescrip;
+        private DataGridViewTextBoxColumn ClmnQuantity;
     }
 }

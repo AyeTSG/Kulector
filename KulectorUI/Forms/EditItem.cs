@@ -47,6 +47,13 @@ namespace KulectorUI.Forms
             _kulmanWin.DGVItems.Rows[WorkingInt].Cells[0].Value = StoredItemName;
             _kulmanWin.DGVItems.Rows[WorkingInt].Cells[1].Value = StoredItemDescription;
             _kulmanWin.DGVItems.Rows[WorkingInt].Cells[2].Value = StoredItemCount;
+
+            this.Close();
+        }
+
+        private void BtnCancelEditing_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

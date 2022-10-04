@@ -35,10 +35,10 @@
             this.RtbItemDesc = new System.Windows.Forms.RichTextBox();
             this.TLPMaster = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.NudItemQuantity = new System.Windows.Forms.NumericUpDown();
+            this.LblItemQuantity = new System.Windows.Forms.Label();
             this.TbItemName = new System.Windows.Forms.TextBox();
             this.LblItemName = new System.Windows.Forms.Label();
-            this.LblItemQuantity = new System.Windows.Forms.Label();
-            this.NudItemQuantity = new System.Windows.Forms.NumericUpDown();
             this.TLPRight.SuspendLayout();
             this.TLPBottomRight.SuspendLayout();
             this.TLPMaster.SuspendLayout();
@@ -94,8 +94,9 @@
             this.BtnCancelEditing.Name = "BtnCancelEditing";
             this.BtnCancelEditing.Size = new System.Drawing.Size(149, 48);
             this.BtnCancelEditing.TabIndex = 1;
-            this.BtnCancelEditing.Text = "Cancel";
+            this.BtnCancelEditing.Text = "s";
             this.BtnCancelEditing.UseVisualStyleBackColor = true;
+            this.BtnCancelEditing.Click += new System.EventHandler(this.BtnCancelEditing_Click);
             // 
             // RtbItemDesc
             // 
@@ -133,6 +134,23 @@
             this.panel1.Size = new System.Drawing.Size(474, 467);
             this.panel1.TabIndex = 1;
             // 
+            // NudItemQuantity
+            // 
+            this.NudItemQuantity.Location = new System.Drawing.Point(117, 46);
+            this.NudItemQuantity.Name = "NudItemQuantity";
+            this.NudItemQuantity.Size = new System.Drawing.Size(354, 27);
+            this.NudItemQuantity.TabIndex = 3;
+            // 
+            // LblItemQuantity
+            // 
+            this.LblItemQuantity.AutoSize = true;
+            this.LblItemQuantity.Location = new System.Drawing.Point(9, 48);
+            this.LblItemQuantity.Name = "LblItemQuantity";
+            this.LblItemQuantity.Size = new System.Drawing.Size(102, 20);
+            this.LblItemQuantity.TabIndex = 2;
+            this.LblItemQuantity.Text = "Item Quantity:";
+            this.LblItemQuantity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // TbItemName
             // 
             this.TbItemName.Location = new System.Drawing.Point(101, 12);
@@ -149,23 +167,6 @@
             this.LblItemName.TabIndex = 0;
             this.LblItemName.Text = "Item Name:";
             this.LblItemName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // LblItemQuantity
-            // 
-            this.LblItemQuantity.AutoSize = true;
-            this.LblItemQuantity.Location = new System.Drawing.Point(9, 48);
-            this.LblItemQuantity.Name = "LblItemQuantity";
-            this.LblItemQuantity.Size = new System.Drawing.Size(102, 20);
-            this.LblItemQuantity.TabIndex = 2;
-            this.LblItemQuantity.Text = "Item Quantity:";
-            this.LblItemQuantity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // NudItemQuantity
-            // 
-            this.NudItemQuantity.Location = new System.Drawing.Point(117, 46);
-            this.NudItemQuantity.Name = "NudItemQuantity";
-            this.NudItemQuantity.Size = new System.Drawing.Size(354, 27);
-            this.NudItemQuantity.TabIndex = 3;
             // 
             // EditItem
             // 

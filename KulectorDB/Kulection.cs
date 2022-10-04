@@ -1,6 +1,8 @@
 ﻿// Copyright AyeTSG 2022.
 // Handles a single kulection
 
+using System.Drawing;
+
 namespace KulectorDB
 {
     public class KulectionConstants
@@ -33,6 +35,14 @@ namespace KulectorDB
         public void AddItem(string ItemName, string ItemDescription, int ItemQuantity)
         {
             KulectionItem tmpitem = new KulectionItem(ItemName, ItemDescription, ItemQuantity);
+
+            KulectionItems.Add(tmpitem);
+        }
+
+        // adds an item advancely
+        public void AddItem(string ItemName, string ItemDescription, int ItemQuantity, Bitmap ItemImage)
+        {
+            KulectionItem tmpitem = new KulectionItem(ItemName, ItemDescription, ItemQuantity, ItemImage);
 
             KulectionItems.Add(tmpitem);
         }

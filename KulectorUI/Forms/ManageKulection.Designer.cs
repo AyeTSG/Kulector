@@ -40,6 +40,7 @@
             this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVItems)).BeginInit();
             this.TLPEditButtons.SuspendLayout();
             this.PNLTitle.SuspendLayout();
@@ -54,7 +55,8 @@
             this.DGVItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClmName,
             this.ClmDescrip,
-            this.ClmnQuantity});
+            this.ClmnQuantity,
+            this.Image});
             this.DGVItems.Location = new System.Drawing.Point(14, 13);
             this.DGVItems.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGVItems.Name = "DGVItems";
@@ -170,6 +172,14 @@
             this.ClmnQuantity.Name = "ClmnQuantity";
             this.ClmnQuantity.ReadOnly = true;
             // 
+            // Image
+            // 
+            this.Image.HeaderText = "Image";
+            this.Image.MinimumWidth = 6;
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Visible = false;
+            // 
             // ManageKulection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -204,5 +214,6 @@
         private DataGridViewTextBoxColumn ClmName;
         private DataGridViewTextBoxColumn ClmDescrip;
         private DataGridViewTextBoxColumn ClmnQuantity;
+        private DataGridViewImageColumn Image;
     }
 }

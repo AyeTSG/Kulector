@@ -1,4 +1,5 @@
-﻿// Handles items within a kulection
+﻿// Copyright AyeTSG 2022.
+// Handles items within a kulection
 
 namespace KulectorDB
 {

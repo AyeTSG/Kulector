@@ -1,4 +1,6 @@
-﻿using KulectorDB;
+﻿// Copyright AyeTSG 2022.
+
+using KulectorDB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

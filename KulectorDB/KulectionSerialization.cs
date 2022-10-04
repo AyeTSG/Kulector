@@ -1,4 +1,5 @@
-﻿// Handles serialization/deserialization to/from a file
+﻿// Copyright AyeTSG 2022.
+// Handles serialization/deserialization to/from a file
 
 using System;
 using System.IO;

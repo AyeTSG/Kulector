@@ -1,4 +1,5 @@
-﻿using KulectorDB;
+﻿// Copyright AyeTSG 2022.
+using KulectorDB;
 
 namespace KulectorDevTest
 {

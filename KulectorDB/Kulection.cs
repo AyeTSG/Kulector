@@ -1,4 +1,5 @@
-﻿// Handles a single kulection
+﻿// Copyright AyeTSG 2022.
+// Handles a single kulection
 
 namespace KulectorDB
 {

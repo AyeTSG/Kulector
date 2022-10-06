@@ -16,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Forms\RenameKul.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\NewKul.cs">
       <SubType>Form</SubType>
     </Compile>

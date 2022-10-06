@@ -30,6 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVItems = new System.Windows.Forms.DataGridView();
+            this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClmnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.BTNSave = new System.Windows.Forms.Button();
             this.BTNAdd = new System.Windows.Forms.Button();
             this.BTNRemove = new System.Windows.Forms.Button();
@@ -37,10 +41,6 @@
             this.SfdCreateKul = new System.Windows.Forms.SaveFileDialog();
             this.PNLTitle = new System.Windows.Forms.Panel();
             this.LBLTitle = new System.Windows.Forms.Label();
-            this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClmnQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVItems)).BeginInit();
             this.TLPEditButtons.SuspendLayout();
             this.PNLTitle.SuspendLayout();
@@ -67,6 +67,41 @@
             this.DGVItems.Size = new System.Drawing.Size(886, 488);
             this.DGVItems.TabIndex = 0;
             this.DGVItems.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVItems_CellDoubleClick);
+            // 
+            // ClmName
+            // 
+            this.ClmName.HeaderText = "Name";
+            this.ClmName.MinimumWidth = 6;
+            this.ClmName.Name = "ClmName";
+            this.ClmName.ReadOnly = true;
+            // 
+            // ClmDescrip
+            // 
+            this.ClmDescrip.HeaderText = "Description";
+            this.ClmDescrip.MinimumWidth = 6;
+            this.ClmDescrip.Name = "ClmDescrip";
+            this.ClmDescrip.ReadOnly = true;
+            this.ClmDescrip.Visible = false;
+            // 
+            // ClmnQuantity
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.ClmnQuantity.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ClmnQuantity.HeaderText = "Quantity";
+            this.ClmnQuantity.MinimumWidth = 6;
+            this.ClmnQuantity.Name = "ClmnQuantity";
+            this.ClmnQuantity.ReadOnly = true;
+            // 
+            // Image
+            // 
+            this.Image.HeaderText = "Image";
+            this.Image.MinimumWidth = 6;
+            this.Image.Name = "Image";
+            this.Image.ReadOnly = true;
+            this.Image.Visible = false;
             // 
             // BTNSave
             // 
@@ -144,41 +179,6 @@
             this.LBLTitle.TabIndex = 0;
             this.LBLTitle.Text = "[ KUL TITLE ]";
             this.LBLTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ClmName
-            // 
-            this.ClmName.HeaderText = "Name";
-            this.ClmName.MinimumWidth = 6;
-            this.ClmName.Name = "ClmName";
-            this.ClmName.ReadOnly = true;
-            // 
-            // ClmDescrip
-            // 
-            this.ClmDescrip.HeaderText = "Description";
-            this.ClmDescrip.MinimumWidth = 6;
-            this.ClmDescrip.Name = "ClmDescrip";
-            this.ClmDescrip.ReadOnly = true;
-            this.ClmDescrip.Visible = false;
-            // 
-            // ClmnQuantity
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.ClmnQuantity.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ClmnQuantity.HeaderText = "Quantity";
-            this.ClmnQuantity.MinimumWidth = 6;
-            this.ClmnQuantity.Name = "ClmnQuantity";
-            this.ClmnQuantity.ReadOnly = true;
-            // 
-            // Image
-            // 
-            this.Image.HeaderText = "Image";
-            this.Image.MinimumWidth = 6;
-            this.Image.Name = "Image";
-            this.Image.ReadOnly = true;
-            this.Image.Visible = false;
             // 
             // ManageKulection
             // 

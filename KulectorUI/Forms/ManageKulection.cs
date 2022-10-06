@@ -51,6 +51,9 @@ namespace KulectorUI.Forms
                 // add item
                 WorkingKulection.AddItem((string)Row.Cells[0].Value, (string)Row.Cells[1].Value, (int)Row.Cells[2].Value, (Bitmap)Row.Cells[3].Value);
             }
+
+            // set the title
+            WorkingKulection.KulectionName = LBLTitle.Text;
         }
 
         // save kulection out to file

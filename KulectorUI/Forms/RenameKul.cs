@@ -24,10 +24,11 @@ namespace KulectorUI.Forms
             _kulmanWin = kulmanWin;
         }
 
-        // Create the actual collection
+        
         private void BtnRename_Click(object sender, EventArgs e)
         {
-            
+            _kulmanWin.LBLTitle.Text = TbCollectionName.Text;
+            this.Close();
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVItems = new System.Windows.Forms.DataGridView();
             this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClmDescrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,11 +86,11 @@
             // 
             // ClmnQuantity
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.ClmnQuantity.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.ClmnQuantity.DefaultCellStyle = dataGridViewCellStyle1;
             this.ClmnQuantity.HeaderText = "Quantity";
             this.ClmnQuantity.MinimumWidth = 6;
             this.ClmnQuantity.Name = "ClmnQuantity";
@@ -169,6 +169,7 @@
             this.BtnRenameKul.TabIndex = 7;
             this.BtnRenameKul.Text = "Rename Kulection";
             this.BtnRenameKul.UseVisualStyleBackColor = true;
+            this.BtnRenameKul.Click += new System.EventHandler(this.BtnRenameKul_Click);
             // 
             // SfdCreateKul
             // 
@@ -224,7 +225,7 @@
         private TableLayoutPanel TLPEditButtons;
         private SaveFileDialog SfdCreateKul;
         private Panel PNLTitle;
-        private Label LBLTitle;
+        public Label LBLTitle;
         private DataGridViewTextBoxColumn ClmName;
         private DataGridViewTextBoxColumn ClmDescrip;
         private DataGridViewTextBoxColumn ClmnQuantity;

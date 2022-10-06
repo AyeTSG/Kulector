@@ -99,5 +99,12 @@ namespace KulectorUI.Forms
             var NewKulForm = new EditItem(this, e.RowIndex, (string)Row.Cells[0].Value, (string)Row.Cells[1].Value, (int)Row.Cells[2].Value, (Bitmap)Row.Cells[3].Value);
             NewKulForm.Show();
         }
+
+        private void BtnRenameKul_Click(object sender, EventArgs e)
+        {
+            // create and open a new rename window
+            var RenameForm = new RenameKul(this);
+            RenameForm.Show();
+        }
     }
 }

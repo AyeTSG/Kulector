@@ -7,7 +7,7 @@ namespace KulectorDB
 {
     public class KulectionConstants
     {
-        public static string VERSION = "v0.2";
+        public static string VERSION = "v0.2.1";
     }
 
     [Serializable]

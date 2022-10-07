@@ -1,3 +1,5 @@
+using KulectorDB;
+
 namespace KulectorUI
 {
     internal static class Program
@@ -9,12 +11,27 @@ namespace KulectorUI
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+
+            //MessageBox.Show(args.Length.ToString());
+
             ApplicationConfiguration.Initialize();
-            Application.Run(new Forms.Greeting());
+
+            if (args.Length >= 1)
+            {
+                // grab file path
+                Kulection tmpKul = KulectionSerialization.LoadKulectionFile(args[0]);
+
+                // run the app
+                Application.Run(new Forms.ManageKulection(tmpKul));
+            }
+            else
+            {
+                Application.Run(new Forms.Greeting());
+            }
         }
     }
 }

@@ -22,6 +22,8 @@ namespace KulectorUI.Forms
             InitializeComponent();
 
             _kulmanWin = kulmanWin;
+
+            TbCollectionName.Text = _kulmanWin.LBLTitle.Text;
         }
 
         

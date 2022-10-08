@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KulectorDB\KulectorDB.csproj" />
+    <ProjectReference Include="..\KulectorExternalApis\KulectorExternalApis.csproj" />
   </ItemGroup>
 
   <ItemGroup>

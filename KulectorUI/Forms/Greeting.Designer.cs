@@ -36,11 +36,12 @@
             this.LblUiVer = new System.Windows.Forms.Label();
             this.SfdCreateKul = new System.Windows.Forms.SaveFileDialog();
             this.OfdOpenKul = new System.Windows.Forms.OpenFileDialog();
+            this.BtnAdvanceImport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnCreate
             // 
-            this.BtnCreate.Location = new System.Drawing.Point(71, 144);
+            this.BtnCreate.Location = new System.Drawing.Point(79, 121);
             this.BtnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCreate.Name = "BtnCreate";
             this.BtnCreate.Size = new System.Drawing.Size(150, 31);
@@ -51,7 +52,7 @@
             // 
             // BtnOpen
             // 
-            this.BtnOpen.Location = new System.Drawing.Point(71, 183);
+            this.BtnOpen.Location = new System.Drawing.Point(79, 160);
             this.BtnOpen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnOpen.Name = "BtnOpen";
             this.BtnOpen.Size = new System.Drawing.Size(150, 31);
@@ -64,7 +65,7 @@
             // 
             this.LblTitle.AutoSize = true;
             this.LblTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblTitle.Location = new System.Drawing.Point(81, 24);
+            this.LblTitle.Location = new System.Drawing.Point(84, 21);
             this.LblTitle.Name = "LblTitle";
             this.LblTitle.Size = new System.Drawing.Size(145, 46);
             this.LblTitle.TabIndex = 2;
@@ -75,7 +76,7 @@
             // 
             this.LblSubtitle.AutoSize = true;
             this.LblSubtitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblSubtitle.Location = new System.Drawing.Point(87, 67);
+            this.LblSubtitle.Location = new System.Drawing.Point(87, 64);
             this.LblSubtitle.Name = "LblSubtitle";
             this.LblSubtitle.Size = new System.Drawing.Size(137, 46);
             this.LblSubtitle.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             this.LblDbVer.AutoSize = true;
             this.LblDbVer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblDbVer.Location = new System.Drawing.Point(14, 259);
+            this.LblDbVer.Location = new System.Drawing.Point(14, 272);
             this.LblDbVer.Name = "LblDbVer";
             this.LblDbVer.Size = new System.Drawing.Size(113, 19);
             this.LblDbVer.TabIndex = 4;
@@ -96,7 +97,7 @@
             // 
             this.LblUiVer.AutoSize = true;
             this.LblUiVer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblUiVer.Location = new System.Drawing.Point(14, 242);
+            this.LblUiVer.Location = new System.Drawing.Point(14, 255);
             this.LblUiVer.Name = "LblUiVer";
             this.LblUiVer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.LblUiVer.Size = new System.Drawing.Size(109, 19);
@@ -113,11 +114,23 @@
             this.OfdOpenKul.DefaultExt = "kul";
             this.OfdOpenKul.Filter = "Kulections|*.kul";
             // 
+            // BtnAdvanceImport
+            // 
+            this.BtnAdvanceImport.Location = new System.Drawing.Point(79, 199);
+            this.BtnAdvanceImport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnAdvanceImport.Name = "BtnAdvanceImport";
+            this.BtnAdvanceImport.Size = new System.Drawing.Size(150, 31);
+            this.BtnAdvanceImport.TabIndex = 6;
+            this.BtnAdvanceImport.Text = "Advanced Import";
+            this.BtnAdvanceImport.UseVisualStyleBackColor = true;
+            this.BtnAdvanceImport.Click += new System.EventHandler(this.BtnAdvanceImport_Click);
+            // 
             // Greeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 285);
+            this.ClientSize = new System.Drawing.Size(305, 301);
+            this.Controls.Add(this.BtnAdvanceImport);
             this.Controls.Add(this.LblUiVer);
             this.Controls.Add(this.LblDbVer);
             this.Controls.Add(this.LblSubtitle);
@@ -145,5 +158,6 @@
         private Label LblUiVer;
         private SaveFileDialog SfdCreateKul;
         private OpenFileDialog OfdOpenKul;
+        private Button BtnAdvanceImport;
     }
 }

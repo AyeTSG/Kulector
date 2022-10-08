@@ -14,7 +14,7 @@ namespace KulectorDB
         // Holds the version of KulectionDB
         // that should be saved into
         // a kulection file.
-        public static string VERSION = "v0.2.1";
+        public static string VERSION = "v0.2.2";
     }
 
     [Serializable]

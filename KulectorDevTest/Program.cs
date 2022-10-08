@@ -6,10 +6,11 @@
 // class to a file.
 
 using KulectorDB;
+using KulectorExternalApis;
 
 namespace KulectorDevTest
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -51,6 +52,12 @@ namespace KulectorDevTest
             // load the kulection
             Console.WriteLine("testing loading...");
             Kulection testLoadCol = KulectionSerialization.LoadKulectionFile("./TEST.kul");
+
+            // testing discogs api
+            Console.WriteLine("testing discogs api...");
+            DiscogsApi DiscogsApi = new DiscogsApi();
+            String test = DiscogsApi.GetPrimaryImage("24252608");
+            Console.WriteLine("image got! " + test);
         }
     }
 }

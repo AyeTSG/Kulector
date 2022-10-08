@@ -38,11 +38,24 @@ namespace KulectorUI.Forms
             // Get the Kulection
             Kulection openedKul = KulectionSerialization.LoadKulectionFile(OfdOpenKul.FileName);
 
-            // Open a Kulection
-            this.Hide();
-            var NewManageForm = new ManageKulection(openedKul);
-            NewManageForm.FormClosed += (s, args) => this.Close();
-            NewManageForm.Show();
+            // Check the version
+            if (openedKul.KulectionVersion != KulectionConstants.VERSION)
+            {
+                // Show the warning dialog!
+                this.Hide();
+                var WarningForm = new VerWarning(openedKul);
+                WarningForm.FormClosed += (s, args) => this.Close();
+                WarningForm.Show();
+            }
+            else
+            {
+
+                // Open a Kulection
+                this.Hide();
+                var NewManageForm = new ManageKulection(openedKul);
+                NewManageForm.FormClosed += (s, args) => this.Close();
+                NewManageForm.Show();
+            }
         }
     }
 }

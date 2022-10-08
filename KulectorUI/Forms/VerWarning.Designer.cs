@@ -31,8 +31,8 @@
             this.LblSubtitle = new System.Windows.Forms.Label();
             this.LblTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnContinue = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
+            this.BtnContinue = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,16 +73,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(270, 52);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // BtnContinue
-            // 
-            this.BtnContinue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnContinue.Location = new System.Drawing.Point(138, 3);
-            this.BtnContinue.Name = "BtnContinue";
-            this.BtnContinue.Size = new System.Drawing.Size(129, 46);
-            this.BtnContinue.TabIndex = 0;
-            this.BtnContinue.Text = "Yes";
-            this.BtnContinue.UseVisualStyleBackColor = true;
-            // 
             // BtnCancel
             // 
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -92,6 +82,18 @@
             this.BtnCancel.TabIndex = 1;
             this.BtnCancel.Text = "No";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
+            // BtnContinue
+            // 
+            this.BtnContinue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnContinue.Location = new System.Drawing.Point(138, 3);
+            this.BtnContinue.Name = "BtnContinue";
+            this.BtnContinue.Size = new System.Drawing.Size(129, 46);
+            this.BtnContinue.TabIndex = 0;
+            this.BtnContinue.Text = "Yes";
+            this.BtnContinue.UseVisualStyleBackColor = true;
+            this.BtnContinue.Click += new System.EventHandler(this.BtnContinue_Click);
             // 
             // VerWarning
             // 

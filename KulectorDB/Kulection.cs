@@ -26,7 +26,7 @@ namespace KulectorDB
         // the version of KulectionDB
         // that this kulection was
         // last saved / edited with
-        public static string KulectionVersion;
+        public string KulectionVersion;
 
         // the items this kulection holds
         public List<KulectionItem> KulectionItems;

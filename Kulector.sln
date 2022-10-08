@@ -11,8 +11,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KulectorDB", "KulectorDB\KulectorDB.csproj", "{D8C02DED-FA0D-4A86-9789-D7A58A906478}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KulectorUI", "KulectorUI\KulectorUI.csproj", "{8A856C44-635D-466A-A65E-296FAD7AA369}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD0DF933-66F6-44FD-8478-5A30FCC4F4E8} = {AD0DF933-66F6-44FD-8478-5A30FCC4F4E8}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KulectorExternalApis", "KulectorExternalApis\KulectorExternalApis.csproj", "{AD0DF933-66F6-44FD-8478-5A30FCC4F4E8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D8C02DED-FA0D-4A86-9789-D7A58A906478} = {D8C02DED-FA0D-4A86-9789-D7A58A906478}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

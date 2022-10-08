@@ -4,6 +4,7 @@
 // Discogs API for Kulector
 
 using System.Net;
+using KulectorDB;
 using Newtonsoft.Json;
 
 namespace KulectorExternalApis
@@ -34,6 +35,16 @@ namespace KulectorExternalApis
 
             // Return the URL
             return ImageUrl;
+        }
+
+        // Creates a Kulection, from a Discogs CSV Export
+        public Kulection FromCollectionCsv(string FileName)
+        {
+            // Create a new Kulection
+            Kulection outKul = new Kulection("Discogs Import");
+
+            // Return the final Kulection
+            return outKul;
         }
     }
 }

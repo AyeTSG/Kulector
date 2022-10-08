@@ -57,5 +57,15 @@ namespace KulectorUI.Forms
                 NewManageForm.Show();
             }
         }
+
+        // on advance import...
+        private void BtnAdvanceImport_Click(object sender, EventArgs e)
+        {
+            // Open a Kulection
+            this.Hide();
+            var NewManageForm = new AdvancedImport();
+            NewManageForm.FormClosed += (s, args) => this.Close();
+            NewManageForm.Show();
+        }
     }
 }

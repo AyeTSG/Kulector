@@ -40,11 +40,12 @@
             // 
             this.LblSubtitle.AutoSize = true;
             this.LblSubtitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblSubtitle.Location = new System.Drawing.Point(64, 55);
+            this.LblSubtitle.Location = new System.Drawing.Point(38, 55);
             this.LblSubtitle.Name = "LblSubtitle";
-            this.LblSubtitle.Size = new System.Drawing.Size(180, 46);
+            this.LblSubtitle.Size = new System.Drawing.Size(219, 115);
             this.LblSubtitle.TabIndex = 7;
-            this.LblSubtitle.Text = "Want to import data\r\nfrom somewhere else?\r\n";
+            this.LblSubtitle.Text = "Want to import data\r\nfrom somewhere else?\r\n\r\nNOTE: Window may appear\r\nto freeze u" +
+    "pon data import\r\n";
             this.LblSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblTitle
@@ -63,7 +64,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.BtnDiscogsCsv, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 146);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 200);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -91,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 259);
+            this.ClientSize = new System.Drawing.Size(308, 275);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.LblSubtitle);
             this.Controls.Add(this.LblTitle);

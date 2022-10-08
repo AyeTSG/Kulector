@@ -1,29 +1,30 @@
 ﻿// Copyright AyeTSG 2022.
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+// Handles the UI for managing
+// the items and data within
+// a Kulection
+
 using KulectorDB;
 
 namespace KulectorUI.Forms
 {
     public partial class ManageKulection : Form
     {
+        // hold the kulection in memory
         private Kulection WorkingKulection;
 
         public ManageKulection(Kulection InCollection)
         {
+            // set the working kulection
             WorkingKulection = InCollection;
 
+            // setup components
             InitializeComponent();
 
+            // set the ui title to the kulection title
             LBLTitle.Text = WorkingKulection.KulectionName;
+
+            // populate the item list
             PopulateItems();
         }
 
@@ -59,26 +60,30 @@ namespace KulectorUI.Forms
         // save kulection out to file
         private void BTNSave_Click(object sender, EventArgs e)
         {
-            // KulectionSerialization.WriteKulectionFile("./TEST.kul", WorkingKulection);
-
+            // save the ui data to the kulection
             SaveToWorking();
 
             // Show the dialog
             SfdCreateKul.ShowDialog();
 
-            // Create a Kulection
+            // Create a Kulection file
             KulectionSerialization.WriteKulectionFile(SfdCreateKul.FileName, WorkingKulection);
         }
 
+        // on add item...
         private void BTNAdd_Click(object sender, EventArgs e)
         {
+            // create a temp 256x256 image
             Bitmap tmpImage = new Bitmap(256, 256);
+
+            // add the new item to the UI
             DGVItems.Rows.Add("New Item", "Item Description", 1, tmpImage);
         }
 
+        // on remove item...
         private void BTNRemove_Click(object sender, EventArgs e)
         {
-            // prevent anything but first column from being sent
+            // prevent anything but first column from being selected
             foreach (DataGridViewCell Cell in DGVItems.SelectedCells)
             {
                 if (DGVItems.Columns[Cell.ColumnIndex].Name != ClmName.Name)
@@ -87,12 +92,15 @@ namespace KulectorUI.Forms
                 }
             }
 
+            // for each selected column...
             foreach (DataGridViewCell Cell in DGVItems.SelectedCells)
             {
+                // remove it from the ui
                 DGVItems.Rows.RemoveAt(Cell.RowIndex);
             }
         }
 
+        // on cell double click...
         private void DGVItems_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // get the item
@@ -103,6 +111,7 @@ namespace KulectorUI.Forms
             NewKulForm.Show();
         }
 
+        // on kulection rename...
         private void BtnRenameKul_Click(object sender, EventArgs e)
         {
             // create and open a new rename window

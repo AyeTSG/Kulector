@@ -1,5 +1,8 @@
 ﻿// Copyright AyeTSG 2022.
+
 // Handles image manipulation
+// Primarily, for resizing item
+// images upon saving the Kulection
 
 using System.Drawing;
 using System.Drawing.Drawing2D;

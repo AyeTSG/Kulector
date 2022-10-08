@@ -1,9 +1,9 @@
 ﻿// Copyright AyeTSG 2022.
-// Handles serialization/deserialization to/from a file
 
-using System;
+// Handles serialization/deserialization
+// of a Kulection to/from a file.
+
 using System.Drawing;
-using System.IO;
 using System.IO.Compression;
 using System.Runtime.Serialization.Formatters.Binary;
 using KulectorDB.Utils;

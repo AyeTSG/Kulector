@@ -1,14 +1,8 @@
 ﻿// Copyright AyeTSG 2022.
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+// Handles the UI for
+// creating a new Kulection
+
 using KulectorDB;
 
 namespace KulectorUI.Forms
@@ -17,12 +11,14 @@ namespace KulectorUI.Forms
     {
         public NewKul()
         {
+            // setup components
             InitializeComponent();
         }
 
         // Create the actual collection
         private void BtnCreate_Click(object sender, EventArgs e)
         {
+            // create a new kulection
             Kulection tmpKul = new Kulection(TbCollectionName.Text);
 
             // show new kullection window

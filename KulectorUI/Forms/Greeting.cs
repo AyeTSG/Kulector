@@ -1,14 +1,8 @@
 ﻿// Copyright AyeTSG 2022.
 
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+// Handles the ui for welcoming
+// the user to the Kulector app
+
 using KulectorDB;
 
 namespace KulectorUI.Forms
@@ -17,6 +11,7 @@ namespace KulectorUI.Forms
     {
         public Greeting()
         {
+            // setup components
             InitializeComponent();
 
             // set version info
@@ -27,15 +22,6 @@ namespace KulectorUI.Forms
         // Create Kulection
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            /* == old ==
-            // Show the dialog
-            SfdCreateKul.ShowDialog();
-
-            // Create a Kulection
-            Kulection createdKul = new Kulection("New Kulection");
-            KulectionSerialization.WriteKulectionFile(SfdCreateKul.FileName, createdKul);
-            */
-
             // show new kullection window
             this.Hide();
             var NewKulForm = new NewKul();

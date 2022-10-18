@@ -20,7 +20,7 @@ namespace KulectorExporter
 
             foreach (KulectionItem Item in InKul.KulectionItems)
             {
-                outFile.WriteLine("- " + Item.ItemName + "");
+                outFile.WriteLine("- " + Item.ItemName + " [" + Item.ItemQuantity + "x]");
             }
         }
     }

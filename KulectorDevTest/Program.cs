@@ -5,6 +5,7 @@
 // the viability of serializing the Kulection
 // class to a file.
 
+using System.Drawing;
 using KulectorDB;
 using KulectorExternalApis;
 
@@ -56,7 +57,7 @@ namespace KulectorDevTest
             // testing discogs api
             Console.WriteLine("testing discogs api...");
             DiscogsApi DiscogsApi = new DiscogsApi();
-            String test = DiscogsApi.GetPrimaryImage("24252608");
+            Bitmap test = DiscogsApi.GetPrimaryImage("24252608");
             Console.WriteLine("image got! " + test);
         }
     }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Icon = KulectorUI.Properties.Resources.MainIcon;
+
             this.BtnCreate = new System.Windows.Forms.Button();
             this.BtnOpen = new System.Windows.Forms.Button();
             this.LblTitle = new System.Windows.Forms.Label();

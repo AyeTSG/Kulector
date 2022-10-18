@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Icon = KulectorUI.Properties.Resources.MainIcon;
+
             this.TLPRight = new System.Windows.Forms.TableLayoutPanel();
             this.TLPBottomRight = new System.Windows.Forms.TableLayoutPanel();
             this.BtnSaveItem = new System.Windows.Forms.Button();

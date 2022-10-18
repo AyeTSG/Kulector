@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Icon = KulectorUI.Properties.Resources.MainIcon;
+
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVItems = new System.Windows.Forms.DataGridView();
             this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();

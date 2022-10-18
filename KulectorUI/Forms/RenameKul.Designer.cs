@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.Icon = KulectorUI.Properties.Resources.MainIcon;
+
             this.LblTitle = new System.Windows.Forms.Label();
             this.LblSubtitle = new System.Windows.Forms.Label();
             this.TbCollectionName = new System.Windows.Forms.TextBox();

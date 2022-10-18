@@ -1,4 +1,9 @@
-﻿using KulectorDB;
+﻿// Copyright AyeTSG 2022.
+
+// Handles exporting a Kulection
+// to a text file.
+
+using KulectorDB;
 
 namespace KulectorExporter
 {

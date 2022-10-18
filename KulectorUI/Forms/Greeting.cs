@@ -15,8 +15,8 @@ namespace KulectorUI.Forms
             InitializeComponent();
 
             // set version info
-            LblUiVer.Text = "KulectionUI " + Program.VERSION;
-            LblDbVer.Text = "KulectionDB " + KulectionConstants.VERSION;
+            LblUiVer.Text = "KulectorUI " + Program.VERSION;
+            LblDbVer.Text = "KulectorDB " + KulectionConstants.VERSION;
         }
 
         // Create Kulection

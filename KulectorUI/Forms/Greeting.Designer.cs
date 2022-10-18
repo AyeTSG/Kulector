@@ -79,9 +79,9 @@
             this.LblDbVer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblDbVer.Location = new System.Drawing.Point(14, 272);
             this.LblDbVer.Name = "LblDbVer";
-            this.LblDbVer.Size = new System.Drawing.Size(113, 19);
+            this.LblDbVer.Size = new System.Drawing.Size(107, 19);
             this.LblDbVer.TabIndex = 4;
-            this.LblDbVer.Text = "KulectionDB vX,X";
+            this.LblDbVer.Text = "KulectorDB vX,X";
             // 
             // LblUiVer
             // 
@@ -90,9 +90,9 @@
             this.LblUiVer.Location = new System.Drawing.Point(14, 255);
             this.LblUiVer.Name = "LblUiVer";
             this.LblUiVer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LblUiVer.Size = new System.Drawing.Size(109, 19);
+            this.LblUiVer.Size = new System.Drawing.Size(103, 19);
             this.LblUiVer.TabIndex = 5;
-            this.LblUiVer.Text = "KulectionUI vX,X";
+            this.LblUiVer.Text = "KulectorUI vX,X";
             // 
             // SfdCreateKul
             // 

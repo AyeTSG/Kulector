@@ -19,9 +19,13 @@ jobs:
           rm KulectorUI/bin/Release/net6.0-windows/win-x64/KulectorDB.pdb
           rm KulectorUI/bin/Release/net6.0-windows/win-x64/KulectorExternalApis.pdb
           rm KulectorUI/bin/Release/net6.0-windows/win-x64/KulectorUI.pdb
-      - uses: vimtor/action-zip@v1
-        name: Zip the build
+      - name: Zip the build
+        uses: vimtor/action-zip@v1
         with: 
           files: KulectorUI/bin/Release/net6.0-windows/win-x64/
-          dest: Kulector-${{ github.ref_name }}-${{ github.sha }}-Win64.zip
-        
+          dest: Kulector_${{ github.ref_name }}-${{ github.sha }}-Win64.zip
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Kulector_${{ github.ref_name }}-${{ github.sha }}-Win64.zip
+          path: Kulector_${{ github.ref_name }}-${{ github.sha }}-Win64.zip

@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Icon = KulectorUI.Properties.Resources.MainIcon;
-
             this.BtnCreate = new System.Windows.Forms.Button();
             this.BtnOpen = new System.Windows.Forms.Button();
-            this.LblTitle = new System.Windows.Forms.Label();
             this.LblSubtitle = new System.Windows.Forms.Label();
             this.LblDbVer = new System.Windows.Forms.Label();
             this.LblUiVer = new System.Windows.Forms.Label();
             this.SfdCreateKul = new System.Windows.Forms.SaveFileDialog();
             this.OfdOpenKul = new System.Windows.Forms.OpenFileDialog();
             this.BtnAdvanceImport = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnCreate
@@ -62,17 +61,6 @@
             this.BtnOpen.Text = "Open a Kulection";
             this.BtnOpen.UseVisualStyleBackColor = true;
             this.BtnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
-            // 
-            // LblTitle
-            // 
-            this.LblTitle.AutoSize = true;
-            this.LblTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblTitle.Location = new System.Drawing.Point(84, 21);
-            this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(145, 46);
-            this.LblTitle.TabIndex = 2;
-            this.LblTitle.Text = "Kulector";
-            this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblSubtitle
             // 
@@ -127,24 +115,36 @@
             this.BtnAdvanceImport.UseVisualStyleBackColor = true;
             this.BtnAdvanceImport.Click += new System.EventHandler(this.BtnAdvanceImport_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::KulectorUI.Properties.Resources.MainLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(64, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(188, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Greeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(305, 301);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnAdvanceImport);
             this.Controls.Add(this.LblUiVer);
             this.Controls.Add(this.LblDbVer);
             this.Controls.Add(this.LblSubtitle);
-            this.Controls.Add(this.LblTitle);
             this.Controls.Add(this.BtnOpen);
             this.Controls.Add(this.BtnCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = global::KulectorUI.Properties.Resources.MainIcon;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Greeting";
             this.Text = "Kulector - Welcome";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,12 +154,12 @@
 
         private Button BtnCreate;
         private Button BtnOpen;
-        private Label LblTitle;
         private Label LblSubtitle;
         private Label LblDbVer;
         private Label LblUiVer;
         private SaveFileDialog SfdCreateKul;
         private OpenFileDialog OfdOpenKul;
         private Button BtnAdvanceImport;
+        private PictureBox pictureBox1;
     }
 }

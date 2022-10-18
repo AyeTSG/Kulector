@@ -8,6 +8,7 @@
 using System.Drawing;
 using KulectorDB;
 using KulectorExternalApis;
+using KulectorExporter;
 
 namespace KulectorDevTest
 {
@@ -59,6 +60,11 @@ namespace KulectorDevTest
             DiscogsApi DiscogsApi = new DiscogsApi();
             Bitmap test = DiscogsApi.GetPrimaryImage("24252608");
             Console.WriteLine("image got! " + test);
+
+            // test text file export
+            Console.WriteLine("testing .txt export...");
+            TxtFileExport txtExport = new TxtFileExport();
+            txtExport.Export(testLoadCol, "./TEST_EXPORT.txt");
         }
     }
 }

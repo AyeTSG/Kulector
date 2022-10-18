@@ -118,5 +118,16 @@ namespace KulectorUI.Forms
             var RenameForm = new RenameKul(this);
             RenameForm.Show();
         }
+
+        // on kulection export...
+        private void BTNExport_Click(object sender, EventArgs e)
+        {
+            // save the ui to working
+            SaveToWorking();
+
+            // show the export dialog
+            var NewExportForm = new Export(WorkingKulection);
+            NewExportForm.Show();
+        }
     }
 }

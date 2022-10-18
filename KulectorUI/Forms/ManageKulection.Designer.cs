@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Icon = KulectorUI.Properties.Resources.MainIcon;
-
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DGVItems = new System.Windows.Forms.DataGridView();
             this.ClmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,9 +36,10 @@
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.BTNSave = new System.Windows.Forms.Button();
             this.BTNAdd = new System.Windows.Forms.Button();
-            this.BTNRemove = new System.Windows.Forms.Button();
             this.TLPEditButtons = new System.Windows.Forms.TableLayoutPanel();
+            this.BTNExport = new System.Windows.Forms.Button();
             this.BtnRenameKul = new System.Windows.Forms.Button();
+            this.BTNRemove = new System.Windows.Forms.Button();
             this.SfdCreateKul = new System.Windows.Forms.SaveFileDialog();
             this.PNLTitle = new System.Windows.Forms.Panel();
             this.LBLTitle = new System.Windows.Forms.Label();
@@ -109,10 +108,10 @@
             // BTNSave
             // 
             this.BTNSave.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTNSave.Location = new System.Drawing.Point(666, 4);
+            this.BTNSave.Location = new System.Drawing.Point(711, 4);
             this.BTNSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTNSave.Name = "BTNSave";
-            this.BTNSave.Size = new System.Drawing.Size(217, 44);
+            this.BTNSave.Size = new System.Drawing.Size(172, 44);
             this.BTNSave.TabIndex = 2;
             this.BTNSave.Text = "Save Kulection";
             this.BTNSave.UseVisualStyleBackColor = true;
@@ -124,35 +123,25 @@
             this.BTNAdd.Location = new System.Drawing.Point(3, 4);
             this.BTNAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTNAdd.Name = "BTNAdd";
-            this.BTNAdd.Size = new System.Drawing.Size(215, 44);
+            this.BTNAdd.Size = new System.Drawing.Size(171, 44);
             this.BTNAdd.TabIndex = 3;
             this.BTNAdd.Text = "Add Item";
             this.BTNAdd.UseVisualStyleBackColor = true;
             this.BTNAdd.Click += new System.EventHandler(this.BTNAdd_Click);
             // 
-            // BTNRemove
-            // 
-            this.BTNRemove.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BTNRemove.Location = new System.Drawing.Point(224, 4);
-            this.BTNRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BTNRemove.Name = "BTNRemove";
-            this.BTNRemove.Size = new System.Drawing.Size(215, 44);
-            this.BTNRemove.TabIndex = 4;
-            this.BTNRemove.Text = "Remove Item";
-            this.BTNRemove.UseVisualStyleBackColor = true;
-            this.BTNRemove.Click += new System.EventHandler(this.BTNRemove_Click);
-            // 
             // TLPEditButtons
             // 
             this.TLPEditButtons.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.TLPEditButtons.ColumnCount = 4;
-            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TLPEditButtons.ColumnCount = 5;
+            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TLPEditButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TLPEditButtons.Controls.Add(this.BTNExport, 3, 0);
             this.TLPEditButtons.Controls.Add(this.BtnRenameKul, 2, 0);
             this.TLPEditButtons.Controls.Add(this.BTNAdd, 0, 0);
-            this.TLPEditButtons.Controls.Add(this.BTNSave, 3, 0);
+            this.TLPEditButtons.Controls.Add(this.BTNSave, 4, 0);
             this.TLPEditButtons.Controls.Add(this.BTNRemove, 1, 0);
             this.TLPEditButtons.Location = new System.Drawing.Point(14, 544);
             this.TLPEditButtons.Name = "TLPEditButtons";
@@ -161,17 +150,41 @@
             this.TLPEditButtons.Size = new System.Drawing.Size(886, 52);
             this.TLPEditButtons.TabIndex = 5;
             // 
+            // BTNExport
+            // 
+            this.BTNExport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTNExport.Location = new System.Drawing.Point(534, 4);
+            this.BTNExport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BTNExport.Name = "BTNExport";
+            this.BTNExport.Size = new System.Drawing.Size(171, 44);
+            this.BTNExport.TabIndex = 3;
+            this.BTNExport.Text = "Export Kulection";
+            this.BTNExport.UseVisualStyleBackColor = true;
+            this.BTNExport.Click += new System.EventHandler(this.BTNExport_Click);
+            // 
             // BtnRenameKul
             // 
             this.BtnRenameKul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnRenameKul.Location = new System.Drawing.Point(445, 4);
+            this.BtnRenameKul.Location = new System.Drawing.Point(357, 4);
             this.BtnRenameKul.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnRenameKul.Name = "BtnRenameKul";
-            this.BtnRenameKul.Size = new System.Drawing.Size(215, 44);
+            this.BtnRenameKul.Size = new System.Drawing.Size(171, 44);
             this.BtnRenameKul.TabIndex = 7;
             this.BtnRenameKul.Text = "Rename Kulection";
             this.BtnRenameKul.UseVisualStyleBackColor = true;
             this.BtnRenameKul.Click += new System.EventHandler(this.BtnRenameKul_Click);
+            // 
+            // BTNRemove
+            // 
+            this.BTNRemove.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BTNRemove.Location = new System.Drawing.Point(180, 4);
+            this.BTNRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BTNRemove.Name = "BTNRemove";
+            this.BTNRemove.Size = new System.Drawing.Size(171, 44);
+            this.BTNRemove.TabIndex = 4;
+            this.BTNRemove.Text = "Remove Item";
+            this.BTNRemove.UseVisualStyleBackColor = true;
+            this.BTNRemove.Click += new System.EventHandler(this.BTNRemove_Click);
             // 
             // SfdCreateKul
             // 
@@ -206,6 +219,7 @@
             this.Controls.Add(this.TLPEditButtons);
             this.Controls.Add(this.DGVItems);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = global::KulectorUI.Properties.Resources.MainIcon;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -223,7 +237,6 @@
         public DataGridView DGVItems;
         private Button BTNSave;
         private Button BTNAdd;
-        private Button BTNRemove;
         private TableLayoutPanel TLPEditButtons;
         private SaveFileDialog SfdCreateKul;
         private Panel PNLTitle;
@@ -233,5 +246,7 @@
         private DataGridViewTextBoxColumn ClmnQuantity;
         private DataGridViewImageColumn Image;
         private Button BtnRenameKul;
+        private Button BTNExport;
+        private Button BTNRemove;
     }
 }

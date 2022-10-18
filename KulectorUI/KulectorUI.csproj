@@ -18,10 +18,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KulectorDB\KulectorDB.csproj" />
+    <ProjectReference Include="..\KulectorExporter\KulectorExporter.csproj" />
     <ProjectReference Include="..\KulectorExternalApis\KulectorExternalApis.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Forms\Export.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\RenameKul.cs">
       <SubType>Form</SubType>
     </Compile>

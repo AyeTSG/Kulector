@@ -59,7 +59,7 @@ namespace KulectorDevTest
             Console.WriteLine("testing discogs api...");
             DiscogsApi DiscogsApi = new DiscogsApi();
             Bitmap test = DiscogsApi.GetPrimaryImage("24252608");
-            Console.WriteLine("image got! " + test);
+            Console.WriteLine("image got! ");
 
             // test text file export
             Console.WriteLine("testing .txt export...");

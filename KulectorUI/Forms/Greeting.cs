@@ -14,10 +14,6 @@ namespace KulectorUI.Forms
         {
             // setup components
             InitializeComponent();
-
-            // set version info
-            LblUiVer.Text = "KulectorUI " + KulectorUI.VersionInfo.VERSION;
-            LblDbVer.Text = "KulectorDB " + KulectorDB.VersionInfo.VERSION;
         }
 
         // Create Kulection
@@ -67,6 +63,14 @@ namespace KulectorUI.Forms
             var NewManageForm = new AdvancedImport();
             NewManageForm.FormClosed += (s, args) => this.Close();
             NewManageForm.Show();
+        }
+
+        // on about...
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Open the about window
+            var NewAboutForm = new About();
+            NewAboutForm.Show();
         }
     }
 }

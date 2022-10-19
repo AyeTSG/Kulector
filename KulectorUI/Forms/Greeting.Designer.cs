@@ -31,12 +31,11 @@
             this.BtnCreate = new System.Windows.Forms.Button();
             this.BtnOpen = new System.Windows.Forms.Button();
             this.LblSubtitle = new System.Windows.Forms.Label();
-            this.LblDbVer = new System.Windows.Forms.Label();
-            this.LblUiVer = new System.Windows.Forms.Label();
             this.SfdCreateKul = new System.Windows.Forms.SaveFileDialog();
             this.OfdOpenKul = new System.Windows.Forms.OpenFileDialog();
             this.BtnAdvanceImport = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,27 +72,6 @@
             this.LblSubtitle.Text = "Collect what you\r\ncare about";
             this.LblSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // LblDbVer
-            // 
-            this.LblDbVer.AutoSize = true;
-            this.LblDbVer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblDbVer.Location = new System.Drawing.Point(14, 272);
-            this.LblDbVer.Name = "LblDbVer";
-            this.LblDbVer.Size = new System.Drawing.Size(107, 19);
-            this.LblDbVer.TabIndex = 4;
-            this.LblDbVer.Text = "KulectorDB vX,X";
-            // 
-            // LblUiVer
-            // 
-            this.LblUiVer.AutoSize = true;
-            this.LblUiVer.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblUiVer.Location = new System.Drawing.Point(14, 255);
-            this.LblUiVer.Name = "LblUiVer";
-            this.LblUiVer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LblUiVer.Size = new System.Drawing.Size(103, 19);
-            this.LblUiVer.TabIndex = 5;
-            this.LblUiVer.Text = "KulectorUI vX,X";
-            // 
             // SfdCreateKul
             // 
             this.SfdCreateKul.DefaultExt = "kul";
@@ -125,15 +103,25 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(79, 238);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 31);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "About";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Greeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(305, 301);
+            this.ClientSize = new System.Drawing.Size(305, 288);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BtnAdvanceImport);
-            this.Controls.Add(this.LblUiVer);
-            this.Controls.Add(this.LblDbVer);
             this.Controls.Add(this.LblSubtitle);
             this.Controls.Add(this.BtnOpen);
             this.Controls.Add(this.BtnCreate);
@@ -155,11 +143,10 @@
         private Button BtnCreate;
         private Button BtnOpen;
         private Label LblSubtitle;
-        private Label LblDbVer;
-        private Label LblUiVer;
         private SaveFileDialog SfdCreateKul;
         private OpenFileDialog OfdOpenKul;
         private Button BtnAdvanceImport;
         private PictureBox pictureBox1;
+        private Button button1;
     }
 }

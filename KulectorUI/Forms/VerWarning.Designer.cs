@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Icon = KulectorUI.Properties.Resources.MainIcon;
-
             this.LblSubtitle = new System.Windows.Forms.Label();
             this.LblTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,10 +42,10 @@
             this.LblSubtitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LblSubtitle.Location = new System.Drawing.Point(26, 55);
             this.LblSubtitle.Name = "LblSubtitle";
-            this.LblSubtitle.Size = new System.Drawing.Size(246, 138);
+            this.LblSubtitle.Size = new System.Drawing.Size(241, 161);
             this.LblSubtitle.TabIndex = 5;
-            this.LblSubtitle.Text = "This Kulection was last\r\nsaved using a different version!\r\n\r\nDo you still\r\nwant t" +
-    "o open it?\r\n\r\n";
+            this.LblSubtitle.Text = "This Kulection was last\r\nsaved using a different version\r\nof the database module!" +
+    "\r\n\r\nDo you still\r\nwant to open it?\r\n\r\n";
             this.LblSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblTitle
@@ -68,7 +66,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.BtnCancel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.BtnContinue, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 196);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 217);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -101,10 +99,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 260);
+            this.ClientSize = new System.Drawing.Size(294, 292);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.LblSubtitle);
             this.Controls.Add(this.LblTitle);
+            this.Icon = global::KulectorUI.Properties.Resources.MainIcon;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "VerWarning";

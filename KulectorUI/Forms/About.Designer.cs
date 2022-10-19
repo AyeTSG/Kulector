@@ -30,12 +30,14 @@
         {
             this.LblSubtitle = new System.Windows.Forms.Label();
             this.LblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PbHeart = new System.Windows.Forms.PictureBox();
             this.LblUiVer = new System.Windows.Forms.Label();
             this.LblExternalApiVer = new System.Windows.Forms.Label();
             this.LblExporterVer = new System.Windows.Forms.Label();
             this.LblDbVer = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PbProgress = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHeart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbProgress)).BeginInit();
             this.SuspendLayout();
             // 
             // LblSubtitle
@@ -62,15 +64,15 @@
             this.LblTitle.Text = "About";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // PbHeart
             // 
-            this.pictureBox1.Image = global::KulectorUI.Properties.Resources.Heart;
-            this.pictureBox1.Location = new System.Drawing.Point(95, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.PbHeart.Image = global::KulectorUI.Properties.Resources.Heart;
+            this.PbHeart.Location = new System.Drawing.Point(95, 78);
+            this.PbHeart.Name = "PbHeart";
+            this.PbHeart.Size = new System.Drawing.Size(24, 24);
+            this.PbHeart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbHeart.TabIndex = 6;
+            this.PbHeart.TabStop = false;
             // 
             // LblUiVer
             // 
@@ -112,16 +114,27 @@
             this.LblDbVer.TabIndex = 10;
             this.LblDbVer.Text = "KulectorDB vX.X";
             // 
+            // PbProgress
+            // 
+            this.PbProgress.Image = global::KulectorUI.Properties.Resources.progress;
+            this.PbProgress.Location = new System.Drawing.Point(222, 348);
+            this.PbProgress.Name = "PbProgress";
+            this.PbProgress.Size = new System.Drawing.Size(75, 54);
+            this.PbProgress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbProgress.TabIndex = 11;
+            this.PbProgress.TabStop = false;
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 418);
+            this.Controls.Add(this.PbProgress);
             this.Controls.Add(this.LblDbVer);
             this.Controls.Add(this.LblExporterVer);
             this.Controls.Add(this.LblExternalApiVer);
             this.Controls.Add(this.LblUiVer);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PbHeart);
             this.Controls.Add(this.LblSubtitle);
             this.Controls.Add(this.LblTitle);
             this.Icon = global::KulectorUI.Properties.Resources.MainIcon;
@@ -129,7 +142,8 @@
             this.MinimizeBox = false;
             this.Name = "About";
             this.Text = "Kulector - About";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbHeart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbProgress)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,10 +153,11 @@
 
         private Label LblSubtitle;
         private Label LblTitle;
-        private PictureBox pictureBox1;
+        private PictureBox PbHeart;
         private Label LblUiVer;
         private Label LblExternalApiVer;
         private Label LblExporterVer;
         private Label LblDbVer;
+        private PictureBox PbProgress;
     }
 }

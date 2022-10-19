@@ -30,17 +30,21 @@
         {
             this.LblSubtitle = new System.Windows.Forms.Label();
             this.LblTitle = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // LblSubtitle
             // 
             this.LblSubtitle.AutoSize = true;
             this.LblSubtitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblSubtitle.Location = new System.Drawing.Point(58, 55);
+            this.LblSubtitle.Location = new System.Drawing.Point(40, 55);
             this.LblSubtitle.Name = "LblSubtitle";
-            this.LblSubtitle.Size = new System.Drawing.Size(174, 69);
+            this.LblSubtitle.Size = new System.Drawing.Size(216, 276);
             this.LblSubtitle.TabIndex = 5;
-            this.LblSubtitle.Text = "Kulector is made with\r\n     by AyeTSG\r\n\r\n";
+            this.LblSubtitle.Text = "Kulector is made with\r\n     by AyeTSG\r\n\r\n\r\nThis project utilizes other\r\nopen sour" +
+    "ce software.\r\nThis list can be seen below.\r\n\r\nDiscogs API\r\nNewtonsoft.JSON\r\nTwem" +
+    "oji\r\n\r\n";
             this.LblSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LblTitle
@@ -54,11 +58,22 @@
             this.LblTitle.Text = "About";
             this.LblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::KulectorUI.Properties.Resources.Heart;
+            this.pictureBox1.Location = new System.Drawing.Point(88, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 260);
+            this.ClientSize = new System.Drawing.Size(315, 457);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblSubtitle);
             this.Controls.Add(this.LblTitle);
             this.Icon = global::KulectorUI.Properties.Resources.MainIcon;
@@ -66,6 +81,7 @@
             this.MinimizeBox = false;
             this.Name = "About";
             this.Text = "Kulector - About";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,5 +91,6 @@
 
         private Label LblSubtitle;
         private Label LblTitle;
+        private PictureBox pictureBox1;
     }
 }

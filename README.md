@@ -1,4 +1,8 @@
-# Kulector
+![](docs/full_logo_docs.png)
+## "Collect what you care about"
+
+---
+
 ![](docs/present.png)
 
-### A super simple app to create and manage collections of various things.
+### Kulector is a super simple app designed to catalog your collections of stuff!

@@ -4,6 +4,7 @@
 // the user to the Kulector app
 
 using KulectorDB;
+using KulectorExternalApis;
 
 namespace KulectorUI.Forms
 {
@@ -15,8 +16,8 @@ namespace KulectorUI.Forms
             InitializeComponent();
 
             // set version info
-            LblUiVer.Text = "KulectorUI " + Program.VERSION;
-            LblDbVer.Text = "KulectorDB " + KulectionConstants.VERSION;
+            LblUiVer.Text = "KulectorUI " + KulectorUI.VersionInfo.VERSION;
+            LblDbVer.Text = "KulectorDB " + KulectorDB.VersionInfo.VERSION;
         }
 
         // Create Kulection
@@ -39,7 +40,7 @@ namespace KulectorUI.Forms
             Kulection openedKul = KulectionSerialization.LoadKulectionFile(OfdOpenKul.FileName);
 
             // Check the version
-            if (openedKul.KulectionVersion != KulectionConstants.VERSION)
+            if (openedKul.KulectionVersion != VersionInfo.VERSION)
             {
                 // Show the warning dialog!
                 this.Hide();

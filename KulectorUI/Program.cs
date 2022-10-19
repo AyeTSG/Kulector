@@ -4,9 +4,6 @@ namespace KulectorUI
 {
     internal static class Program
     {
-        // KulectorUI version
-        public static string VERSION = "v0.4";
-
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

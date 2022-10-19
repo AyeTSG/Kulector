@@ -9,14 +9,6 @@ using System.Drawing;
 
 namespace KulectorDB
 {
-    public class KulectionConstants
-    {
-        // Holds the version of KulectionDB
-        // that should be saved into
-        // a kulection file.
-        public static string VERSION = "v0.2.2";
-    }
-
     [Serializable]
     public class Kulection
     {
@@ -36,7 +28,7 @@ namespace KulectorDB
         {
             // set default properties
             KulectionName = Name;
-            KulectionVersion = KulectionConstants.VERSION;
+            KulectionVersion = KulectorDB.VersionInfo.VERSION;
             KulectionItems = new List<KulectionItem>();
         }
 

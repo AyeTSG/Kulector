@@ -56,7 +56,7 @@ namespace KulectorDB
             }
         }
 
-        // saves a kulection to a file
+        // saves a kulection to a file (deprecated, remove later down the line)
         public static void WriteKulectionFile(string FilePath, Kulection _Kulection)
         {
             // do presave stuff
@@ -94,7 +94,7 @@ namespace KulectorDB
             }
         }
 
-        // loads a kulection from a file
+        // loads a kulection from a file (deprecated, remove later down the line)
         public static Kulection LoadKulectionFile(string FilePath)
         {
             // create a fs stream

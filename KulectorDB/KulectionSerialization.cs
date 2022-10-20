@@ -46,11 +46,12 @@ namespace KulectorDB
             // create a fs stream
             using (Stream stream = File.Open(FilePath, FileMode.Create))
             {
-                // gzip later, need to see plaintext for testing
-
-                using (StreamWriter writer = new StreamWriter(stream))
+                using (GZipStream GZStream = new GZipStream(stream, CompressionMode.Compress))
                 {
-                    new JsonSerializer().Serialize(new JsonTextWriter(writer), _Kulection);
+                    using (StreamWriter writer = new StreamWriter(GZStream))
+                    {
+                        new JsonSerializer().Serialize(new JsonTextWriter(writer), _Kulection);
+                    }
                 }
             }
         }
@@ -80,14 +81,15 @@ namespace KulectorDB
             // create a fs stream
             using (Stream stream = File.Open(FilePath, FileMode.Open))
             {
-                // gzip later
-
-                using (var reader = new StreamReader(stream))
+                using (GZipStream GZStream = new GZipStream(stream, CompressionMode.Decompress))
                 {
-                    JsonSerializer serializer = new JsonSerializer();
-                    Kulection retKul = (Kulection)serializer.Deserialize(reader, typeof(Kulection));
+                    using (var reader = new StreamReader(GZStream))
+                    {
+                        JsonSerializer serializer = new JsonSerializer();
+                        Kulection retKul = (Kulection)serializer.Deserialize(reader, typeof(Kulection));
 
-                    return retKul;
+                        return retKul;
+                    }
                 }
             }
         }

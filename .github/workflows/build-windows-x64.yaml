@@ -23,7 +23,7 @@ jobs:
         uses: vimtor/action-zip@v1
         with: 
           files: KulectorUI/bin/Release/net6.0-windows/win-x64/
-          dest: Kulector_${{ github.ref_name }}-${{ github.sha }}-Win64.zip
+          dest: Kulector_${{ github.ref_name }}-${{ github.sha }}-Release-Win64.zip
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
@@ -44,7 +44,7 @@ jobs:
         uses: vimtor/action-zip@v1
         with: 
           files: KulectorUI/bin/Debug/net6.0-windows/win-x64/
-          dest: Kulector_${{ github.ref_name }}-${{ github.sha }}-Win64.zip
+          dest: Kulector_${{ github.ref_name }}-${{ github.sha }}-Debug-Win64.zip
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:

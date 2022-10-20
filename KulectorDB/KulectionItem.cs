@@ -41,7 +41,7 @@ namespace KulectorDB
 
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    ItemImage.Save(ms, ImageFormat.Bmp);
+                    ItemImage.Save(ms, ImageFormat.Png);
                     return ms.ToArray();
                 }
             }

@@ -28,7 +28,7 @@ namespace KulectorDevTest
             Array colors = Enum.GetValues(typeof(System.Drawing.KnownColor));
 
             // bulk add test items
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 64; i++)
             {
                 // make an item with a random name, description, and quantity
                 KulectionItem testItem = new KulectionItem(rnd.Next(0, 512).ToString(), rnd.Next(0, 512).ToString(), rnd.Next(1, 64));
@@ -49,11 +49,11 @@ namespace KulectorDevTest
 
             // save it.
             Console.WriteLine("testing saving...");
-            KulectionSerialization.WriteKulectionFile("./TEST.kul", testCol);
+            KulectionSerialization.WriteKulectionFileV2("./TEST.kul", testCol);
 
             // load the kulection
             Console.WriteLine("testing loading...");
-            Kulection testLoadCol = KulectionSerialization.LoadKulectionFile("./TEST.kul");
+            Kulection testLoadCol = KulectionSerialization.LoadKulectionFileV2("./TEST.kul");
 
             // testing discogs api
             Console.WriteLine("testing discogs api...");

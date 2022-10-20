@@ -6,14 +6,15 @@
 using System.Drawing;
 using System.IO.Compression;
 using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
 using KulectorDB.Utils;
 
 namespace KulectorDB
 {
     public static class KulectionSerialization
     {
-        // saves a kulection to a file
-        public static void WriteKulectionFile(string FilePath, Kulection _Kulection)
+        // handles pre-save tasks
+        public static Kulection PreSave(Kulection _Kulection)
         {
             // for each item...
             foreach (KulectionItem Item in _Kulection.KulectionItems)
@@ -30,7 +31,36 @@ namespace KulectorDB
                     // set the original image back
                     Item.ItemImage = (Bitmap)tmpImage;
                 }
+
             }
+
+            return _Kulection;
+        }
+
+        // saves a kulection to a v2 file
+        public static void WriteKulectionFileV2(string FilePath, Kulection _Kulection)
+        {
+            // do presave stuff
+            _Kulection = PreSave(_Kulection);
+
+            // create a fs stream
+            using (Stream stream = File.Open(FilePath, FileMode.Create))
+            {
+                using (GZipStream GZStream = new GZipStream(stream, CompressionMode.Compress))
+                {
+                    using (StreamWriter writer = new StreamWriter(GZStream))
+                    {
+                        new JsonSerializer().Serialize(new JsonTextWriter(writer), _Kulection);
+                    }
+                }
+            }
+        }
+
+        // saves a kulection to a file (deprecated, remove later down the line)
+        public static void WriteKulectionFile(string FilePath, Kulection _Kulection)
+        {
+            // do presave stuff
+            _Kulection = PreSave(_Kulection);
 
             // create a fs stream
             using (Stream stream = File.Open(FilePath, FileMode.Create))
@@ -45,7 +75,26 @@ namespace KulectorDB
             }
         }
 
-        // loads a kulection from a file
+        // loads a kulection from a v2 file
+        public static Kulection LoadKulectionFileV2(string FilePath)
+        {
+            // create a fs stream
+            using (Stream stream = File.Open(FilePath, FileMode.Open))
+            {
+                using (GZipStream GZStream = new GZipStream(stream, CompressionMode.Decompress))
+                {
+                    using (var reader = new StreamReader(GZStream))
+                    {
+                        JsonSerializer serializer = new JsonSerializer();
+                        Kulection retKul = (Kulection)serializer.Deserialize(reader, typeof(Kulection));
+
+                        return retKul;
+                    }
+                }
+            }
+        }
+
+        // loads a kulection from a file (deprecated, remove later down the line)
         public static Kulection LoadKulectionFile(string FilePath)
         {
             // create a fs stream

@@ -23,6 +23,12 @@ namespace KulectorDB
         // the items this kulection holds
         public List<KulectionItem> KulectionItems;
 
+        // need this for serialization >:L
+        private Kulection()
+        {
+
+        }
+
         // default constructor for a kulection
         public Kulection(string Name)
         {

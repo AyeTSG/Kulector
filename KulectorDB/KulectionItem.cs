@@ -4,7 +4,10 @@
 // Handles a single item
 // held within a Kulection
 
+using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Imaging;
+using Newtonsoft.Json;
 
 namespace KulectorDB
 {
@@ -23,7 +26,46 @@ namespace KulectorDB
 
         // the image associated
         // with the item
+        [JsonIgnore]
         public Bitmap ItemImage;
+
+        // the xml-serializeable image
+        // https://stackoverflow.com/a/1907165
+        [Browsable(false), EditorBrowsable(EditorBrowsableState.Never)]
+        [JsonProperty("ItemImage")]
+        public byte[] ItemImageXmlSerialize
+        {
+            get
+            {
+                if (ItemImage == null) return null;
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    ItemImage.Save(ms, ImageFormat.Bmp);
+                    return ms.ToArray();
+                }
+            }
+
+            set
+            {
+                if (value == null)
+                {
+                    ItemImage = null;
+                } else
+                {
+                    using (MemoryStream ms = new MemoryStream(value))
+                    {
+                        ItemImage = new Bitmap(ms);
+                    }
+                }
+            }
+        }
+
+        // need this for serialization >:L
+        private KulectionItem()
+        {
+
+        }
 
         // Default constructor for a kulection item
         public KulectionItem(string Name, string Description, int Quantity)

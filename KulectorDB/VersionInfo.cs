@@ -8,6 +8,6 @@ namespace KulectorDB
     public class VersionInfo
     {
         // KulectorUI version
-        public static string VERSION = "v0.2.2";
+        public static string VERSION = "v0.3";
     }
 }

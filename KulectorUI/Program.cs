@@ -1,5 +1,6 @@
 using KulectorDB;
 using KulectorUI.Forms;
+using Newtonsoft.Json;
 
 namespace KulectorUI
 {
@@ -21,7 +22,17 @@ namespace KulectorUI
             if (args.Length >= 1)
             {
                 // grab file path
-                Kulection tmpKul = KulectionSerialization.LoadKulectionFile(args[0]);
+                Kulection tmpKul;
+
+                // Get the Kulection
+                try
+                {
+                    tmpKul = KulectionSerialization.LoadKulectionFileV2(args[0]);
+                }
+                catch (JsonReaderException)
+                {
+                    tmpKul = KulectionSerialization.LoadKulectionFile(args[0]);
+                }
 
                 // Check the version
                 if (tmpKul.KulectionVersion != KulectorDB.VersionInfo.VERSION)

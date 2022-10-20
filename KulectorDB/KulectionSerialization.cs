@@ -74,6 +74,24 @@ namespace KulectorDB
             }
         }
 
+        // loads a kulection from a v2 file
+        public static Kulection LoadKulectionFileV2(string FilePath)
+        {
+            // create a fs stream
+            using (Stream stream = File.Open(FilePath, FileMode.Open))
+            {
+                // gzip later
+
+                using (var reader = new StreamReader(stream))
+                {
+                    JsonSerializer serializer = new JsonSerializer();
+                    Kulection retKul = (Kulection)serializer.Deserialize(reader, typeof(Kulection));
+
+                    return retKul;
+                }
+            }
+        }
+
         // loads a kulection from a file
         public static Kulection LoadKulectionFile(string FilePath)
         {

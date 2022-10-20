@@ -33,7 +33,7 @@ namespace KulectorUI.Forms
             OfdOpenKul.ShowDialog();
 
             // Get the Kulection
-            Kulection openedKul = KulectionSerialization.LoadKulectionFile(OfdOpenKul.FileName);
+            Kulection openedKul = KulectionSerialization.LoadKulectionFileV2(OfdOpenKul.FileName);
 
             // Check the version
             if (openedKul.KulectionVersion != KulectorDB.VersionInfo.VERSION)

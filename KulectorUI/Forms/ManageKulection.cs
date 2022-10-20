@@ -67,7 +67,7 @@ namespace KulectorUI.Forms
             SfdCreateKul.ShowDialog();
 
             // Create a Kulection file
-            KulectionSerialization.WriteKulectionFile(SfdCreateKul.FileName, WorkingKulection);
+            KulectionSerialization.WriteKulectionFileV2(SfdCreateKul.FileName, WorkingKulection);
         }
 
         // on add item...

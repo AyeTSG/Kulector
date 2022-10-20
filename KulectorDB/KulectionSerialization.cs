@@ -6,6 +6,7 @@
 using System.Drawing;
 using System.IO.Compression;
 using System.Runtime.Serialization.Formatters.Binary;
+using Newtonsoft.Json;
 using KulectorDB.Utils;
 
 namespace KulectorDB
@@ -30,9 +31,28 @@ namespace KulectorDB
                     // set the original image back
                     Item.ItemImage = (Bitmap)tmpImage;
                 }
+
             }
 
             return _Kulection;
+        }
+
+        // saves a kulection to a v2 file
+        public static void WriteKulectionFileV2(string FilePath, Kulection _Kulection)
+        {
+            // do presave stuff
+            _Kulection = PreSave(_Kulection);
+
+            // create a fs stream
+            using (Stream stream = File.Open(FilePath, FileMode.Create))
+            {
+                // gzip later, need to see plaintext for testing
+
+                using (StreamWriter writer = new StreamWriter(stream))
+                {
+                    new JsonSerializer().Serialize(new JsonTextWriter(writer), _Kulection);
+                }
+            }
         }
 
         // saves a kulection to a file

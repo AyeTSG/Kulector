@@ -5,6 +5,7 @@
 
 using KulectorDB;
 using KulectorExternalApis;
+using Newtonsoft.Json;
 
 namespace KulectorUI.Forms
 {
@@ -32,8 +33,16 @@ namespace KulectorUI.Forms
             // Show the dialog
             OfdOpenKul.ShowDialog();
 
+            Kulection openedKul;
+
             // Get the Kulection
-            Kulection openedKul = KulectionSerialization.LoadKulectionFileV2(OfdOpenKul.FileName);
+            try
+            {
+                openedKul = KulectionSerialization.LoadKulectionFileV2(OfdOpenKul.FileName);
+            } catch (JsonReaderException)
+            {
+                openedKul = KulectionSerialization.LoadKulectionFile(OfdOpenKul.FileName);
+            }
 
             // Check the version
             if (openedKul.KulectionVersion != KulectorDB.VersionInfo.VERSION)

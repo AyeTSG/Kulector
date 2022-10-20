@@ -3,7 +3,7 @@ name: Build - Windows (x64)
 on: [push]
 
 jobs:
-  build:
+  build_release:
     runs-on: windows-2019
 
     steps:
@@ -27,5 +27,26 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Kulector_${{ github.ref_name }}-${{ github.sha }}-Win64.zip
-          path: Kulector_${{ github.ref_name }}-${{ github.sha }}-Win64.zip
+          name: Kulector_${{ github.ref_name }}-${{ github.sha }}-Release-Win64.zip
+          path: Kulector_${{ github.ref_name }}-${{ github.sha }}-Release-Win64.zip
+  build_debug:
+    runs-on: windows-2019
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET Core SDK 6.0
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0'
+      - name: Build
+        run: dotnet build --configuration Debug --arch x64 KulectorUI
+      - name: Zip the build
+        uses: vimtor/action-zip@v1
+        with: 
+          files: KulectorUI/bin/Debug/net6.0-windows/win-x64/
+          dest: Kulector_${{ github.ref_name }}-${{ github.sha }}-Win64.zip
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Kulector_${{ github.ref_name }}-${{ github.sha }}-Debug-Win64.zip
+          path: Kulector_${{ github.ref_name }}-${{ github.sha }}-Debug-Win64.zip

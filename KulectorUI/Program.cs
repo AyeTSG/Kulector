@@ -1,4 +1,5 @@
 using KulectorDB;
+using KulectorUI.Forms;
 
 namespace KulectorUI
 {
@@ -22,8 +23,18 @@ namespace KulectorUI
                 // grab file path
                 Kulection tmpKul = KulectionSerialization.LoadKulectionFile(args[0]);
 
-                // run the app
-                Application.Run(new Forms.ManageKulection(tmpKul));
+                // Check the version
+                if (tmpKul.KulectionVersion != KulectorDB.VersionInfo.VERSION)
+                {
+                    // Show the warning dialog!
+                    Application.Run(new VerWarning(tmpKul));
+                }
+                else
+                {
+
+                    // Open a Kulection
+                    Application.Run(new ManageKulection(tmpKul));
+                }
             }
             else
             {

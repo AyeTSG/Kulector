@@ -36,7 +36,7 @@ namespace KulectorUI.Forms
             Kulection openedKul = KulectionSerialization.LoadKulectionFile(OfdOpenKul.FileName);
 
             // Check the version
-            if (openedKul.KulectionVersion != VersionInfo.VERSION)
+            if (openedKul.KulectionVersion != KulectorDB.VersionInfo.VERSION)
             {
                 // Show the warning dialog!
                 this.Hide();

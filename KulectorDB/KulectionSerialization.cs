@@ -12,8 +12,8 @@ namespace KulectorDB
 {
     public static class KulectionSerialization
     {
-        // saves a kulection to a file
-        public static void WriteKulectionFile(string FilePath, Kulection _Kulection)
+        // handles pre-save tasks
+        public static Kulection PreSave(Kulection _Kulection)
         {
             // for each item...
             foreach (KulectionItem Item in _Kulection.KulectionItems)
@@ -31,6 +31,15 @@ namespace KulectorDB
                     Item.ItemImage = (Bitmap)tmpImage;
                 }
             }
+
+            return _Kulection;
+        }
+
+        // saves a kulection to a file
+        public static void WriteKulectionFile(string FilePath, Kulection _Kulection)
+        {
+            // do presave stuff
+            _Kulection = PreSave(_Kulection);
 
             // create a fs stream
             using (Stream stream = File.Open(FilePath, FileMode.Create))
